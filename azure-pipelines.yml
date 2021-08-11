@@ -16,7 +16,6 @@ steps:
     deploymentScope: 'Resource Group'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'LiorRG'
-    location: 'Central US'
+    location: 'Central Us'
     templateLocation: 'Linked artifact'
-    csmFile: 'storage-account.json'
     deploymentMode: 'Incremental'
