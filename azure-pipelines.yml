@@ -10,12 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - task: AzureResourceManagerTemplateDeployment@3
-    inputs:
-      deploymentScope: 'Resource Group'
-      subscriptionId: '72f988bf-86f1-41af-91ab-2d7cd011db47'
-      action: 'Create Or Update Resource Group'
-      resourceGroupName: 'LiorRG'
-      location: 'Central US'
-      templateLocation: 'Linked artifact'
-      deploymentMode: 'Incremental'
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'LiorRG'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    deploymentMode: 'Incremental'
+    addSpnToEnvironment: true
