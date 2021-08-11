@@ -1,0 +1,38 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "liormoav1",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "tags": {
+                "displayName": "liormoav1"
+            },
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Premium_LRS",
+                "tier": "Premium"
+            }
+        },
+       {
+           "name": "liormoav2",
+           "type": "Microsoft.Storage/storageAccounts",
+           "apiVersion": "2019-06-01",
+           "tags": {
+               "displayName": "liormoav2"
+           },
+           "location": "[resourceGroup().location]",
+           "kind": "StorageV2",
+           "sku": {
+               "name": "Premium_LRS",
+               "tier": "Premium"
+           }
+       }
+    ],
+    "outputs": {}
+} 
