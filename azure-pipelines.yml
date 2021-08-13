@@ -15,6 +15,17 @@ steps:
       deploymentScope: 'Resource Group'
       action: 'Create Or Update Resource Group'
       resourceGroupName: 'LiorRG'
+      location: 'Central US'
       templateLocation: 'URL of the file'
-      csmFileLink: 'https://raw.githubusercontent.com/moavl/AzureHomework/main/my-server.json'
+      csmFileLink: 'https://raw.githubusercontent.com/moavl/AzureHomework/main/storage-account.json'
       deploymentMode: 'Incremental'
+
+- task: AzureResourceManagerTemplateDeployment@3
+  inputs:
+    deploymentScope: 'Resource Group'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'LiorRG'
+    location: 'Central US'
+    templateLocation: 'URL of the file'
+    csmFileLink: 'https://raw.githubusercontent.com/moavl/AzureHomework/main/my-server.json'
+    deploymentMode: 'Incremental'
